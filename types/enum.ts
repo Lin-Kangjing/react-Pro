@@ -1,6 +1,8 @@
 
-
-
+export enum BasicStatus {
+  DISABLE,
+  ENABLE
+}
 export enum StorageEnum {
   User = 'user',
   Token = 'token',

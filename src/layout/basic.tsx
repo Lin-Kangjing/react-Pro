@@ -1,3 +1,10 @@
+/*
+ * @Date: 2024-07-08 17:30:46
+ * @LastEditors: LinKangjing linkangjing@foxmail.com
+ * @LastEditTime: 2024-09-19 17:18:21
+ * @FilePath: \react-Pro\src\layout\basic.tsx
+ * @Description: 
+ */
 import React, { useState } from 'react';
 import {
   MenuFoldOutlined,
@@ -7,10 +14,15 @@ import {
   VideoCameraOutlined,
 } from '@ant-design/icons';
 import { Button, Layout, Menu, theme } from 'antd';
+import { useLocation,useMatches  } from "react-router-dom";
 
 const { Header, Sider, Content } = Layout;
 
 const App: React.FC = () => {
+  const location = useLocation();
+  const matches  = useMatches();
+  console.log(matches,location );
+  
   const [collapsed, setCollapsed] = useState(false);
   const {
     token: { colorBgContainer, borderRadiusLG },

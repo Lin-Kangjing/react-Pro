@@ -1,9 +1,9 @@
 /*
  * @Date: 2024-06-27 14:27:34
  * @LastEditors: LinKangjing linkangjing@foxmail.com
- * @LastEditTime: 2024-07-08 17:16:43
+ * @LastEditTime: 2024-09-19 11:03:46
  * @FilePath: \react-Pro\vite.config.ts
- * @Description: 
+ * @Description:
  */
 import { defineConfig } from "vite"
 import react from "@vitejs/plugin-react"
@@ -34,8 +34,8 @@ export default defineConfig({
   //   },
   // },
   build: {
-    target: 'esnext',
-    minify: 'terser',
+    target: "esnext",
+    minify: "terser",
     terserOptions: {
       compress: {
         // 生产环境移除console
