@@ -5,15 +5,8 @@
  * @FilePath: \react-Pro\src\router\index.tsx
  * @Description: 
  */
-/*
- * @Date: 2024-07-11 11:36:09
- * @LastEditors: LinKangjing linkangjing@foxmail.com
- * @LastEditTime: 2024-09-20 09:44:12
- * @FilePath: \react-Pro\src\router\index.tsx
- * @Description: 
- */
-
-import type { AppRouteObject } from '#/router';
+import type { AppRouteObject } from '#/routes';
+import type { RouteObject } from 'react-router-dom';
 import {
   Navigate,
   RouterProvider,
@@ -34,6 +27,6 @@ export default function Router() {
     children: [{ index: true, element: <Navigate to={HOMEPAGE} replace /> }],
   };
   const routes = [...constRoutes,asyncRoutes,];
-  const router = createBrowserRouter(routes)
+  const router = createBrowserRouter(routes as unknown as RouteObject[])
   return <RouterProvider router={router} />;
 }
